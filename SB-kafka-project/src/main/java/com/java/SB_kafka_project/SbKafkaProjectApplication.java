@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SbKafkaProjectApplication {
 
 	// Spring boot run application
+	// Streams API is hihhly used in this project
 	public static void main(String[] args) {
 		SpringApplication.run(SbKafkaProjectApplication.class, args);
 	}
