@@ -1,0 +1,23 @@
+Commands for Kafka
+
+Start zookeeper first (Kafka needs Zookeeper to coordinate brokers)
+Navigate to kafka directory and execute
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Start Kafka server(Broker)
+Navigate to kafka directory and execute
+bin\windows\kafka-server-start.bat config\server.properties
+
+Create a Kafka (eg: test-Topic)
+Navigate to \bin\windows and execute 
+create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+Producer - produce messages
+Navigate to \bin\windows and execute 
+kafka-console-producer.bat --topic test-topic --bootstrap-server localhost:9092
+
+
+Consumer - (Consume messages)
+Navigate to \bin\windows and execute
+kafka-console-consumer.bat --topic test-topic --bootstrap-server localhost:9092 --from-beginning
